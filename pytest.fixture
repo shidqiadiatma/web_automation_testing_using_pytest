@@ -1,0 +1,24 @@
+Feature: Login
+
+@valid
+Scenario: Login in Github successfully
+    Given User have already access Login page and already have account in Github
+    When User input username or email "testertamvan000@gmail.com"
+    And User input password "Qwerty%0"
+    Then The user should login successfully and should see her name when he clicks on the avatar icon
+
+@invalid
+Scenario Outline: Login in Github failed
+    Given User have already access Login Page and already have account in Github
+    When User input username or email with invalid data <email>
+    And User input password with invalid data <password>
+    Then The user should login is failed and should see error message "Incorrect username or password."
+
+Examples:
+    |email                      |password    |
+    |testertamvan000@gmail.com  |Qwerty%     |
+    |testertamvan@gmail.com     |Qwerty%0    |
+    |testertamvan000            |kwerti123   |
+    |                           |Qwerty%0    |
+    |testertamvan000@gmail.com  |            |
+
