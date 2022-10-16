@@ -26,8 +26,8 @@
 # How to Run?
 1. Open terminal
 2. Make sure the file path location is correct
-3. Type 'pytest -v test_tugas05.py'
-4. if you want get the report, type 'pytest -v automation-login.py --html=login-report.html'
+3. Type "pytest -v automation-login.py"
+4. If you want get the report, type "pytest -v automation-login.py --html=login-report.html"
 5. Then press enter
 
 # The Result
